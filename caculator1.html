@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+        width: 370px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+      .calculate {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      input {
+        text-align: right;
+        width: 47%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Caculator</p>
+    <input type="text" id="number-1" />
+    <input type="text" id="number-2" />
+    <div class="calculate">
+      <button onclick="add()" id="addition">Addition(+)</button>
+      <button onclick="sub()" id="subtraction">Subtraction(-)</button>
+      <button onclick="multi()" id="multiplication">Multiplication(x)</button>
+      <button onclick="division()" id="division">Division(/)</button>
+    </div>
+    <p>Result Division: <span id="result"></span></p>
+  </body>
+  <script>
+    function add() {
+      let number_one = document.getElementById("number-1").value;
+      let number_two = document.getElementById("number-2").value;
+      let cong = parseInt(number_one) + parseInt(number_two);
+      document.getElementById("result").innerHTML = cong;
+    }
+    function sub() {
+      let number_one = document.getElementById("number-1").value;
+      let number_two = document.getElementById("number-2").value;
+      let tru = number_one - number_two;
+      document.getElementById("result").innerHTML = tru;
+    }
+    function multi() {
+      let number_one = document.getElementById("number-1").value;
+      let number_two = document.getElementById("number-2").value;
+      let nhan = number_one * number_two;
+      document.getElementById("result").innerHTML = nhan;
+    }
+    function division() {
+      let number_one = document.getElementById("number-1").value;
+      let number_two = document.getElementById("number-2").value;
+      let chia = number_one / number_two;
+      document.getElementById("result").innerHTML = chia;
+    }
+  </script>
+</html>
